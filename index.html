@@ -12,9 +12,10 @@
             padding: 0;
             box-sizing: border-box;
         }
-        #grad{
-            background-image: linear-gradient(to bottom right, pink, purple,yellow);
-               }
+
+        #grad {
+            background-image: linear-gradient(to bottom right, purple, black, pink);
+        }
 
         #header {
             width: 100%;
@@ -96,6 +97,7 @@
             justify-content: center;
             align-items: center;
             font-size: 40px;
+            color: white;
 
         }
 
@@ -104,14 +106,16 @@
             width: 43%;
             background-color: aqua;
         }
-        #leftbox h2{
+
+        #leftbox h2 {
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 30px;
         }
-        #leftbox #para{
+
+        #leftbox .para {
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
@@ -128,20 +132,79 @@
             height: 100px;
             width: 100%;
         }
-        #rightbox{
+
+        #rightbox {
             height: 400px;
             width: 43%;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        #rightbox h3{
+
+        #rightbox h3 {
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
+            color: white;
         }
+
+        .card {
+            background-color: blue;
+            height: 450px;
+            width: 20%;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .card img {
+            height: 180px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        #container-4 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #footer {
+            height: 100px;
+            width: 100%;
+            background-color: gray;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding: 5rem;
+        }
+
+        .card .para {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #web p{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #link a{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
     </style>
 </head>
 
@@ -152,25 +215,25 @@
         </div>
 
         <ul>
-            <a href="#">
+            <a href="#banner">
                 <li>HOME</li>
             </a>
-            <a href="#">
+            <a href="#container-2">
                 <li>ABOUT</li>
             </a>
-            <a href="#">
+            <a href="#container">
                 <li>TEAMS</li>
             </a>
-            <a href="#">
-                <li>TECHNOLOGIES</li>
+            <a href="#container-4">
+                <li>PLANETS</li>
             </a>
-            <a href="#">
+            <a href="#footer">
                 <li>CONTACT</li>
             </a>
         </ul>
     </div>
     <div id="banner">
-        <video src="./video/video (1080p).mp4"  controls loop autoplay></video>
+        <video src="./video/Galaxy_With_Customization.mp4" loop autoplay></video>
     </div>
     <div id="text">
         <h3>Teams</h3>
@@ -188,7 +251,8 @@
             <div>
                 <h2>About Project</h2>
             </div>
-            <div id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facere est quia aperiam quibusdam,
+            <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facere est quia aperiam
+                quibusdam,
                 deserunt exercitationem eius, tempore corporis quos eos similique, voluptatum saepe? Magni temporibus
                 reprehenderit amet et, non odio a doloremque adipisci molestias nulla quisquam aut mollitia fugiat eius
                 exercitationem. Non voluptate asperiores cumque vitae cupiditate explicabo, velit quisquam blanditiis
@@ -205,24 +269,78 @@
                 dolorem atque, hic eligendi nihil id doloremque dignissimos velit at soluta?</div>
         </div>
         <div id="rightbox">
-            <div> <h3>Project-1</h3><img src="https://hindi.cdn.zeenews.com/hindi/sites/default/files/2014/09/22/51668-275799-mmmm.jpg"
-                    alt=""></div>
-            <div><h3>Project-2</h3><img
+            <div>
+                <h3>Project-1</h3><img
+                    src="https://hindi.cdn.zeenews.com/hindi/sites/default/files/2014/09/22/51668-275799-mmmm.jpg"
+                    alt="">
+            </div>
+            <div>
+                <h3>Project-2</h3><img
                     src="data:image/jpeg;base64,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"
-                    alt=""></div>
-            <div><h3>Project-3</h3><img
+                    alt="">
+            </div>
+            <div>
+                <h3>Project-3</h3><img
                     src="https://img.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1701475200&semt=ais"
-                    alt=""></div>
+                    alt="">
+            </div>
 
         </div>
     </div>
-<div id="container-3">
+    <div id="container-3">
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
     </div>
-</div>
+    <div id="container-4">
+        <div class="card"> <img
+                src="https://images.newscientist.com/wp-content/uploads/2017/06/21180000/planet-10-orange-blue-final-small.jpg"
+                alt="">
+            <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam officiis rem nobis
+                optio! Architecto quasi vitae quaerat commodi molestiae voluptates? Molestias eaque sit omnis eligendi
+                nobis modi quod saepe neque et dicta, id, porro maxime
+                cumque perferendis inventore, quibusdam iusto quo nesciunt ut! Nam, quod molestias. Itaque obcaecati
+                repellendus assumenda fuga quidem unde consequatur perspiciatis ab numquam quis deserunt veritatis alias
+            </div>
+        </div>
+        <div class="card"><img
+                src="https://images.news18.com/ibnlive/uploads/2022/01/jupiter-like-planet-16423911184x3.png" alt="">
+            <div class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, aliquid provident minima
+                odit magnam dolorum harum labore quia omnis optio, eum eveniet ab nisi fuga similique. Rem tenetur
+                exercitationem nihil accusantium corporis maxime reiciendis nemo, quis ratione natus non veritatis modi
+                facilis nam officia facere totam asperiores! Libero mollitia impedit qui atque, similique, quod ipsum ex
+                nostrum expedita corporis ullam ducimus soluta dolores porro numquam. Sint,
+                alias?</div>
+        </div>
+        <div class="card"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcDGumUIYPBPm9QuxEkYFX-2zKCEhFHr23dA&usqp=CAU"
+                alt="">
+            <div class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores exercitationem
+                aliquam ducimus dicta voluptatum veniam repellat quo, a quidem? Accusantium facilis, consequatur,
+                ipsum nobis exercitationem corporis nostrum in totam, cum
+                nihil rem inventore earum ratione? Consequuntur a amet asperiores porro voluptatibus officiis
+                reprehenderit ipsa alias ad, vitae incidunt obcaecati ducimus itaque placeat pariatur vero odio
+                molestiae eum quaerat.</div>
+        </div>
+        <div class="card"><img
+                src="https://images.theconversation.com/files/311372/original/file-20200122-117933-hxjvkf.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+                alt="">
+            <div class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore veniam esse repellat
+                hic, illum eum, ullam minus voluptatum quia qui nobis quaerat. Itaque incidunt omnis nobis ratione
+                dignissimos aut error ad illo voluptas doloribus! Rem, inventore ipsa corrupti quo obcaecati enim vel
+                cumque tempore alias distinctio minus maxime reprehenderit nam molestiae in quidem atque, laboriosam
+                doloremque! Mollitia quibusdam pariatur a numquam perferendis labore vitae soluta.</div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="web" >
+            <p>
+                Website Template for Practical-9 © Ari Jit
+                </p>
+                <div id="link"><a href="#grad">Back To Top</a></div>
+        </div>
+    </div>
 
 </body>
 
